@@ -35,7 +35,7 @@ module Slackify
         },
         'revision' => {
           title: 'Revision',
-          value: fetch(:current_revision),
+          value: "<https://github.com/#{fetch(:git_owner)}/#{fetch(:git_repo_name)}/commit/#{fetch(:slack_revision)}|#{fetch(:slack_revision)[0..6]}>",
           short: true
         },
         'hosts' => {
